@@ -4,7 +4,7 @@ from laser import Laser
 class Player(pygame.sprite.Sprite):
     def __init__(self,pos,x_constraint, y_constraint,speed):
         super().__init__()
-        file_path = 'C:/Users/hardi/OneDrive/Documents/[2] Computer Science/[2] Personal Projects/Space Invaders/data/ship.png'
+        file_path = './data/ship.png'
         self.image = pygame.image.load(file_path).convert_alpha()
         self.image = pygame.transform.scale(self.image, (40, 40))
         self.rect = self.image.get_rect(midbottom = pos)

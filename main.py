@@ -18,20 +18,20 @@ class Game:
 
         #health and score setup
         self.lives = 3
-        self.live_surf = pygame.image.load('C:/Users/hardi/OneDrive/Documents/[2] Computer Science/[2] Personal Projects/Space Invaders/data/ship.png')
+        self.live_surf = pygame.image.load('./data/ship.png')
         self.live_surf = pygame.transform.scale(self.live_surf, (40, 40))
         self.live_x_start_pos = screen_width - (self.live_surf.get_size()[0] * 2 + 20)
-        self.score = 0
-        self.font = pygame.font.Font('C:/Users/hardi/OneDrive/Documents/[2] Computer Science/[2] Personal Projects/Space Invaders/data/Pixeled.ttf',20)
+    self.score = 0
+    self.font = pygame.font.Font('./data/Pixeled.ttf',20)
 
-        #alien setup
-        self.aliens = pygame.sprite.Group()
-        self.alien_lasers = pygame.sprite.Group()
-        self.alien_setup(rows = 6, cols = 10)
-        self.alien_direction = 1
+    #alien setup
+    self.aliens = pygame.sprite.Group()
+    self.alien_lasers = pygame.sprite.Group()
+    self.alien_setup(rows = 6, cols = 10)
+    self.alien_direction = 1
 
-        self.extra = pygame.sprite.GroupSingle()
-        self.extra_spawn_time = randint(40,80)
+    self.extra = pygame.sprite.GroupSingle()
+    self.extra_spawn_time = randint(40,80)
 
     def alien_setup(self, rows, cols, x_distance = 60, y_distance = 48, x_offset = 70, y_offset = 100):
         for row_index,row in enumerate(range(rows)):

@@ -3,7 +3,7 @@ import pygame
 class Alien(pygame.sprite.Sprite):
     def __init__(self,color,x,y):
         super().__init__()
-        file_path = 'C:/Users/hardi/OneDrive/Documents/[2] Computer Science/[2] Personal Projects/Space Invaders/data/' + color + '.png'
+        file_path = './data/' + color + '.png'
         self.image = pygame.image.load(file_path).convert_alpha()
         self.rect = self.image.get_rect(topleft = (x,y))
 
